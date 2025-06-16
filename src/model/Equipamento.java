@@ -2,6 +2,7 @@
 package model;
 
 
+import java.time.LocalDate;
 
 // Declaração da classe Equipamento, que representa um equipamento físico ou digital na aplicação
 public class Equipamento {
@@ -18,12 +19,23 @@ public class Equipamento {
     // Atributo que representa o responsável associado ao equipamento, do tipo Utilizador
     private final Utilizador responsavel;
 
+    //Atributo que representa o número de sério do equipamento
+    private final String numeroSerie;
+
+    //Atributo que representa a data de aquisição do equipamento
+    private final LocalDate dataAquisicao;
+
+
+
     // Construtor da classe que inicializa todos os atributos do equipamento ao ser criado
-    public Equipamento(String nome, Estado estado, String sala, Utilizador responsavel) {
+    public Equipamento(String nome, Estado estado, String sala, Utilizador responsavel, String numeroSerie, LocalDate dataAquisicao) {
         this.nome = nome;
         this.estado = estado;
+        this.numeroSerie = numeroSerie;
+        this.dataAquisicao = dataAquisicao;
         this.sala = sala;
         this.responsavel = responsavel;
+
     }
 
     // Método que devolve o nome do equipamento
@@ -44,5 +56,13 @@ public class Equipamento {
     // Método que devolve o responsável atribuído ao equipamento
     public Utilizador getResponsavel() {
         return responsavel;
+    }
+
+    public String getNumeroSerie() {
+        return numeroSerie;
+    }
+
+    public LocalDate getDataAquisicao() {
+        return dataAquisicao;
     }
 }

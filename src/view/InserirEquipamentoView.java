@@ -16,6 +16,8 @@ public class InserirEquipamentoView extends JFrame {
     private final JComboBox<Utilizador> cbResponsavel;
     private final JButton btnInserir;
     private final JButton btnVoltar;
+    private final JTextField numeroSerie;
+    private final JTextField dataAquisicao;
 
     public InserirEquipamentoView() {
         setTitle("Inserir Equipamento");
@@ -24,7 +26,7 @@ public class InserirEquipamentoView extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
 
-        JPanel painel = new JPanel(new GridLayout(6, 2, 10, 10));
+        JPanel painel = new JPanel(new GridLayout(7, 2, 10, 10));
         painel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         painel.add(new JLabel("Nome:"));
@@ -42,6 +44,14 @@ public class InserirEquipamentoView extends JFrame {
         painel.add(new JLabel("Responsável:"));
         cbResponsavel = new JComboBox<>();
         painel.add(cbResponsavel);
+
+        painel.add(new JLabel("Número de Série:"));
+        numeroSerie = new JTextField(20);
+        painel.add(numeroSerie);
+
+        painel.add(new JLabel("Data de Aquisição:"));
+        dataAquisicao = new JTextField(20);
+        painel.add(dataAquisicao);
 
         btnVoltar = new JButton("Voltar");
         btnInserir = new JButton("Inserir");
