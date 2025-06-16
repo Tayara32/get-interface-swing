@@ -1,6 +1,5 @@
-// Declara que esta classe pertence ao pacote "main", normalmente usado como ponto de entrada da
+package main;// Declara que esta classe pertence ao pacote "main", normalmente usado como ponto de entrada da
 // aplicação
-package main;
 
 // Importa a classe LoginController, que será responsável por abrir a interface de login
 import controller.LoginController;
